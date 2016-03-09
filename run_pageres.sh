@@ -1,0 +1,3 @@
+#! /bin/bash
+cd shots
+pageres https://local.jacmoe.dk/ 320x480 360x640 768x1024 800x1280 980x1280 1280x600 1920x900

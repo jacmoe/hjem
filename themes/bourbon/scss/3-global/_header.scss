@@ -1,0 +1,61 @@
+header {
+  @extend %padded;
+  background: $dark-gray;
+  padding: 0.4em;
+  margin-bottom: 2em;
+  @include linx($medium-gray, $medium-gray, $light-gray, $light-gray);
+  #header {
+    @include row();
+    #logo {
+      @include span-columns(5);
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+      .logo {
+        font-size: modular-scale(2);
+        .logo-text {
+          position: relative;
+          top: -0.1em;
+          @include media($tablet) {
+            font-size: modular-scale(-1);
+          }
+          @include media($mobile) {
+            display: none;
+          }
+        }
+        @include linx($light-gray, $light-gray, #fff, #fff);
+        img {
+          position: relative;
+          top: 0.18em;
+        }
+      }
+    }
+    #headermenu {
+      @include span-columns(5);
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+      nav {
+        position: relative;
+        top: 0.7em;
+        @include media($mobile) {
+          top: -2em;
+          padding-bottom: -1em;
+        }
+        a {
+          padding-right: 1em;
+        }
+        a.active {
+          color: $light-gray;
+        }
+        a.rss-link {
+          color: #f9a602;
+          &:before {
+             font-family: FontAwesome;
+             content: "\f09e";
+          }
+        }
+      }
+    }
+  }
+}

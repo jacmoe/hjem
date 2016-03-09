@@ -1,4 +1,1 @@
-Den Stammende Kok
-========
-
-Jacob Moen's personlige hjemmeside.
+This is the code for Jacmoes Cyber Soapbox

@@ -1,0 +1,42 @@
+
+@include sticky-footer(4em);
+
+footer {
+  background: $dark-gray;
+  $foot-color: transparentize($light-gray, 0.6);
+  color: $foot-color;
+  @include linx($foot-color, $foot-color, $light-gray, $light-gray);
+  .footer-wrapper {
+    @extend %padded;
+    font-size: modular-scale(-1);
+    padding-top: 2em;
+    @include media($mobile) {
+      padding-top: 0.5em;
+    }
+    @include clearfix;
+    @include outer-container;
+    .footer-content {
+      @include row();
+      .powered {
+        @include span-columns(5);
+        @include media($mobile) {
+          @include span-columns(4);
+          padding-top: 0.4em;
+        }
+        .dreamhost {
+          position: relative;
+          top: 0.5em;
+        }
+      }
+      .copyright {
+        @include span-columns(5);
+        @include media($mobile) {
+          @include span-columns(4);
+          padding-top: 0.4em;
+        }
+        position: relative;
+        top: 0.4em;
+      }
+    }
+  }
+}
