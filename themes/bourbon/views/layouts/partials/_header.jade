@@ -4,12 +4,12 @@ header
       #logo
         span.logo
           a(href=Yii::$app->homeUrl)
-            img(height="36" width="36" title="Jacmoes Cyber Soapbox"
-              src=$pype_logo alt="Jacmoes Cyber Soapbox")
+            img(height="36" width="36" title="Den Stammende Kok"
+              src=$pype_logo alt="Den Stammende Kok")
             span.logo-text Jacmoes Cyber Soapbox
       #headermenu
         nav.right
-          !=Html::a('Home', Page::url('index'), array('class' => ($view->params['url'] == 'index') ? 'active' : ''))
+          !=Html::a('Hjem', Page::url('index'), array('class' => ($view->params['url'] == 'index') ? 'active' : ''))
           !=Html::a('Blog', Page::url('blog'), array('class' => ($view->params['url'] == 'blog') ? 'active' : ''))
-          !=Html::a('About', Page::url('about'), array('class' => ($view->params['url'] == 'about') ? 'active' : ''))
+          !=Html::a('Om', Page::url('om'), array('class' => ($view->params['url'] == 'om') ? 'active' : ''))
           !=Html::a('', Url::to('/feed'), array('class' => 'rss-link', 'title' => 'RSS Feed'))
