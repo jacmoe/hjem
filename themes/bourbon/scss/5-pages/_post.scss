@@ -11,3 +11,20 @@
     font-size: 1.3em;
   }
 }
+.content {
+  padding-top: 1em;
+}
+%subheading {
+  position: relative;
+  top: -1em;
+  color: tint($dark-gray, 50%);
+  margin-bottom: -1em;
+}
+.updated {
+  @extend %subheading;
+  float: left;
+}
+.tags {
+  @extend %subheading;
+  float: right;
+}
