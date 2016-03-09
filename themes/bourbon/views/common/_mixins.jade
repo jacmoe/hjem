@@ -3,4 +3,4 @@ mixin icondiv(icon)
     i(class="fa fa-#{$icon} fa-small" style="font-size: 0.7em;")
 
 mixin date(date)
-  !=date(Yii::$app->params['dateformat'], $date)
+  !=strftime('%d. %B, %Y', $date)

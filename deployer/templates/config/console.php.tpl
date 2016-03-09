@@ -4,7 +4,8 @@ $params = require(__DIR__ . '/params.php');
 $snippets = require(__DIR__ . '/snippets.php');
 
 return [
-    'id' => 'pype-console',
+    'id' => 'hjem-console',
+    'language' => 'da_DK',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',

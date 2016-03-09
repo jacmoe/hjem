@@ -6,7 +6,8 @@ $snippets = require(__DIR__ . '/snippets.php');
 $theme = 'bourbon';
 
 $config = [
-    'id' => 'jacmoes',
+    'id' => 'hjem',
+    'language' => 'da_DK',
     'basePath' => dirname(__DIR__),
     'defaultRoute' => '/wiki/page',
     'layout' => '@app/themes/' . $theme . '/views/layouts/main.jade',
