@@ -205,7 +205,7 @@
         } else {
             // Implied consent disclosure
             html += scriptsDisclosure + ' <a style="color:'+ settings.linkColor + ';';
-            html += 'font-weight:bold;font-family:' + settings.fontFamily + ';font-size:' + settings.fontSize + ';" href="'+ settings.privacyPolicyUri + '">Read More</a>.';
+            html += 'font-weight:bold;font-family:' + settings.fontFamily + ';font-size:' + settings.fontSize + ';" href="'+ settings.privacyPolicyUri + '">Læs Mere</a>.';
             html += '<div style="margin-top:5px;"><input type="submit" class="' + settings.buttonClass + '" name="impliedsubmit" id="impliedsubmit" value="OK"/></div></div>';
         }
         html += '</div></div>';

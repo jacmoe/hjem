@@ -6,7 +6,7 @@ $(document).ready(function() {
       buttonClass: 'button small',
       position: 'bottom',
       explicitConsent: false,
-      message: 'This website uses cookies for analytics and commenting. By visiting this site you accept the use of cookies.',
+      message: 'Dette websted bruger cookies til trafikmåling og kommentar-systemet. Ved at fortsætte at bruge dette websted accepterer du brugen af cookies.',
       privacyPolicyUri: '/cookies'
     });
 });
