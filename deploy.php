@@ -36,10 +36,11 @@ task('deploy:configure_composer', function () {
 
 // build assets
 task('deploy:build_assets', function () {
-   runLocally('gulp build');
-   upload(__DIR__ . '/themes/bourbon/dist/css', '{{release_path}}/themes/bourbon/dist/css');
-   upload(__DIR__ . '/themes/bourbon/dist/js', '{{release_path}}/themes/bourbon/dist/js');
-   upload(__DIR__ . '/themes/bourbon/dist/fonts', '{{release_path}}/themes/bourbon/dist/fonts');
+    runLocally('gulp build --production');
+    upload(__DIR__ . '/themes/bourbon/assets/dist/css', '{{release_path}}/themes/bourbon/assets/dist/css');
+    upload(__DIR__ . '/themes/bourbon/assets/dist/js', '{{release_path}}/themes/bourbon/assets/dist/js');
+    upload(__DIR__ . '/themes/bourbon/assets/dist/fonts', '{{release_path}}/themes/bourbon/assets/dist/fonts');
+    upload(__DIR__ . '/themes/bourbon/assets/dist/img', '{{release_path}}/themes/bourbon/assets/dist/img');
 })->desc('Build assets');
 
 // update symlink to images dir
