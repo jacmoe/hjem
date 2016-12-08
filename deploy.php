@@ -1,19 +1,9 @@
 <?php
+namespace Deployer;
+
 require_once __DIR__ . '/deployer/recipe/yii-configure.php';
 require_once __DIR__ . '/deployer/recipe/yii2-app-basic.php';
 require_once __DIR__ . '/deployer/recipe/local-config.php';
-/*
-* This file is part of
-*  _ __  _   _ _ __   ___
-* | '_ \| | | | '_ \ / _ \
-* | |_) | |_| | |_) |  __/
-* | .__/ \__, | .__/ \___|
-* |_|    |___/|_|
-*                 Personal Yii Page Engine
-*
-*	Copyright (c) 2016 Jacob Moen
-*	Licensed under the MIT license
-*/
 
 if (!file_exists (__DIR__ . '/deployer/stage/servers.yml')) {
   die('Please create "' . __DIR__ . '/deployer/stage/servers.yml" before continuing.' . "\n");
@@ -28,19 +18,19 @@ set('keep_releases', 2);
 set('writable_use_sudo', false); // Using sudo in writable commands?
 
 task('deploy:configure_composer', function () {
-  $stage = env('app.stage');
+  $stage = get('app.stage');
   if($stage == 'dev') {
-    env('composer_options', 'install --verbose --no-progress --no-interaction');
+    set('composer_options', 'install --verbose --no-progress --no-interaction');
   }
 })->desc('Configure composer');
 
 // build assets
 task('deploy:build_assets', function () {
-    runLocally('gulp build --production');
-    upload(__DIR__ . '/themes/bourbon/assets/dist/css', '{{release_path}}/themes/bourbon/assets/dist/css');
-    upload(__DIR__ . '/themes/bourbon/assets/dist/js', '{{release_path}}/themes/bourbon/assets/dist/js');
-    upload(__DIR__ . '/themes/bourbon/assets/dist/fonts', '{{release_path}}/themes/bourbon/assets/dist/fonts');
-    upload(__DIR__ . '/themes/bourbon/assets/dist/img', '{{release_path}}/themes/bourbon/assets/dist/img');
+   runLocally('gulp build --production');
+   upload(__DIR__ . '/themes/bourbon/assets/dist/css', '{{release_path}}/themes/bourbon/assets/dist/css');
+   upload(__DIR__ . '/themes/bourbon/assets/dist/js', '{{release_path}}/themes/bourbon/assets/dist/js');
+   upload(__DIR__ . '/themes/bourbon/assets/dist/fonts', '{{release_path}}/themes/bourbon/assets/dist/fonts');
+   upload(__DIR__ . '/themes/bourbon/assets/dist/img', '{{release_path}}/themes/bourbon/assets/dist/img');
 })->desc('Build assets');
 
 // update symlink to images dir
