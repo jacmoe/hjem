@@ -4,6 +4,7 @@
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
+Options +SymLinksIfOwnerMatch
 
 # ##############################################################################
 # # Redirect for PHP                                                           #
@@ -36,25 +37,3 @@
 # ##############################################################################
 # # Redirect Old Links                                                         #
 # ##############################################################################
-
-redirect 301 /how-to-send-emails-with-msmtp-on-windows-or-linux-or-mac-os-x http://www.jacmoe.dk/blog/2013/january/how-to-send-emails-with-msmtp-on-windows-or-linux-or-mac-os-x
-redirect 301 /the-blank-keyboard http://www.jacmoe.dk/blog/2012/december/the-blank-keyboard
-redirect 301 /happy-new-year-personal-list-of-things-to-focus-on-in-2012 http://www.jacmoe.dk/blog/2012/january/happy-new-year-personal-list-of-things-to-focus-on-in-2012
-redirect 301 /comments-now-served-by-disqus http://www.jacmoe.dk/blog/2012/january/comments-now-served-by-disqus
-redirect 301 /using-emacs-and-org-mode-for-blogging http://www.jacmoe.dk/blog/2011/december/using-emacs-and-org-mode-for-blogging
-redirect 301 /local-pear-installation-using-pyrus-without-system-wide-server-install http://www.jacmoe.dk/blog/2011/december/local-pear-installation-using-pyrus-without-system-wide-server-install
-redirect 301 /how-to-send-test-emails-using-php-mail-from-your-local-wamp-installation http://www.jacmoe.dk/blog/2011/october/how-to-send-test-emails-using-php-mail-from-your-local-wamp-installation
-redirect 301 /multiple-local-apache-virtual-hosts http://www.jacmoe.dk/blog/2011/september/multiple-local-apache-virtual-hosts
-redirect 301 /what-you-see-is-what-you-mean http://www.jacmoe.dk/blog/2011/august/what-you-see-is-what-you-mean
-redirect 301 /aptosid-reviewed http://www.jacmoe.dk/blog/2011/june/aptosid-reviewed
-redirect 301 /winds-of-change http://www.jacmoe.dk/blog/2011/april/winds-of-change
-redirect 301 /arrgh http://www.jacmoe.dk/blog/2010/december/arrgh
-redirect 301 /new-home-made-blog http://www.jacmoe.dk/blog/2010/december/new-home-made-blog
-redirect 301 /how-to-install-xdebug-and-webgrind-on-wamp http://www.jacmoe.dk/blog/2010/november/how-to-install-xdebug-and-webgrind-on-wamp
-redirect 301 /new-ogre-wiki http://www.jacmoe.dk/blog/2010/june/new-ogre-wiki
-redirect 301 /mercurial-1-5-on-dreamhost http://www.jacmoe.dk/blog/2010/june/mercurial-1-5-on-dreamhost
-
-redirect 301 /page/about http://jacmoe.dk/about
-redirect 301 /page/projects http://jacmoe.dk/projects
-
-redirect 301 /index.php//index http://jacmoe.dk
